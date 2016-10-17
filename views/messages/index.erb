@@ -1,0 +1,8 @@
+<ul>
+<% @messages.each do |message| %>
+ <li>
+   <h4><a href="/messages/<%= message.link %>"><%=h message.body %></a></h4>
+   <p>Created: <%=h message.created_at %></p>
+ </li>
+<% end %>
+</ul>

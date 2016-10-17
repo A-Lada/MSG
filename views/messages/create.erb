@@ -1,0 +1,23 @@
+<!-- <h2>Create message</h2> -->
+<h2>Enter smth</h2>
+<br/>
+<form action="/messages" method="post"role="form">
+ <div class="form-group">
+   <label for="message_body">Message:</label>
+   <br>
+   <textarea id="message_body" name="message[body]" class="form-control" rows="2"><%= @message.body %></textarea>
+   <br>
+ </div>
+ <div class="form-group">
+	<span>
+		<input id="on_visit" name="message[method]" type="radio" value="on_visit" />
+		<label for="on_visit">delete on visit</label>
+	</span>
+	<span>
+		<input id="in_hour" name="message[method]" type="radio" value="in_hour" />
+		<label for="in_hour">delete on time(1 hour after creation)</label>
+	</span>
+ </div>
+ <button type="submit" class="btn btn-success">Submit</button>
+ <br>
+</form>
